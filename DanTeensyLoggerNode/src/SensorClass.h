@@ -53,6 +53,10 @@ class SENSOR
   public:
     SENSOR(string setSens_Name, SensorType setSensType, int setADCinput, int setSensSampleRateHigh, int setSensSampleRateLow);
 
+    SENSOR(const string &sensName, const SensorType senstype, const bool diffRead, const int adCinput,
+           const int sensSampleRateHigh, const int sensSampleRateLow, const int nodeId, const int canid,
+           const elapsedMillis &timer, int currentRawValue);
+
     // Access functions defined in place
     string getSensorName(){return sens_name;}
     SensorType getSensorType(){return senstype;}
